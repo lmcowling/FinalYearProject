@@ -11,13 +11,7 @@
 
       <div class="content">
           <div class="title m-b-md">
-              Laravel Home Page
-          </div>
-          <div class="container">
-            <a href="index" class="title">Display Cards</a>
-          </div>
-          <div class="container">
-            <a href="about" class="title small">About Page</a>
+              Home Page
           </div>
       </div>
   </div>

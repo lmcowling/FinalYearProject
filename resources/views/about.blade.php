@@ -3,10 +3,9 @@
 @section('content')
   <div class="flex-center position-ref full-height">
       <div class="content">
-          <div class="title m-b-md">
-              Laravel About Page
+          <div class="title">
+            Rules/How to play
           </div>
-          <a href="/"><h3>Back to Home</h3></a>
       </div>
   </div>
 @endsection
