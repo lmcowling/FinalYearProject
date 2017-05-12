@@ -12,8 +12,7 @@
 */
 
 Route::get('/', function (){
-    return "Error 404. Page doesn't exist";
-    //     return view('welcome');
+        return view('welcome');
 });
 
 // Route::get('home', function (){
@@ -28,14 +27,21 @@ Route::get('tables', 'TablesController@getTables'); // list of tables.
 Route::get('tables/prem', 'TablesController@getPremTable'); // the actual table.
 Route::get('tables/user', 'TablesController@getUserTable'); // the table made from the users predictions.
 
-Route::get('leagues', 'LeaguesController@getLeagues'); // list of leagues.
-Route::get('leagues/myLeagues', 'LeaguesController@getMyLeagues'); // the users leagues there are in.
-Route::get('leagues/myLeagues/{leagueID}', 'LeaguesController@getLeagueDetail'); // the details of a specific league.
-Route::get('leagues/search', 'LeaguesController@searchLeagues'); // search for leagues.
-Route::get('leagues/new', 'LeaguesController@newLeague'); // create a new league.
 
-Route::get('predictions', 'PredictionsController@predictionsList'); // input predictions
-Route::get('predictions/{gameWeekID}', 'PredictionsController@showPredictions'); // input predictions
+Route::get('leagues', 'LeaguesController@getLeagues'); // list of leagues.
+Route::get('leagues/searchLeagues', 'LeaguesController@searchLeagues'); // search for leagues.
+Route::post('leagues/searchLeagues', 'LeaguesController@leagueSearchResults'); // search for leagues.
+Route::get('leagues/new', 'LeaguesController@newLeague'); // create a new league.
+Route::post('leagues/add', 'LeaguesController@addLeague'); // add a new league.
+Route::get('leagues/{leagueID}', 'LeaguesController@getLeagueDetail'); // the details of a specific league.
+Route::get('leagues/{leagueID}/delete', 'LeaguesController@deleteLeague'); // delete a specific league.
+Route::post('leagues/{leagueID}/verify', 'LeaguesController@verifyLeague'); // verify league joining.
+Route::get('leagues/{leagueID}/join', 'LeaguesController@joinLeague'); // join a specific league.
+Route::get('leagues/{leagueID}/leave', 'LeaguesController@leaveLeague'); // leave a specific league.
+
+
+Route::get('predictions', 'PredictionsController@predictionsList'); // get predictions list
+Route::get('predictions/{gameWeekID}', 'PredictionsController@showPredictions'); // show predictions
 Route::get('predictions/{gameWeekID}/add', 'PredictionsController@addPredictions'); // input predictions
 Route::post('predictions/{gameWeekID}/insert', 'PredictionsController@insertPredictions'); // adding predictions
 Route::get('predictions/{gameWeekID}/edit', 'PredictionsController@editPredictions'); // edit predictions

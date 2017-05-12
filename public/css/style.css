@@ -22,7 +22,8 @@ html, body {
       text-align: center;
       color: #242424;
       padding: 50px 0px;
-
+      margin: 10px auto;
+      width: 80%
     }
 
     .pageBody {
@@ -30,9 +31,18 @@ html, body {
       background-color: #fff;
       text-align: center;
       margin: 10px auto;
-      padding: 20px;
+      padding: 20px 0px;
       color: #000;
       font-weight: bold;
+    }
+
+    .pageHeader {
+      background-color:  #38003c; /* Purple */
+      text-align: center;
+      color: white;
+      padding: 20px 0px;
+      margin: 10px auto;
+      width: 100%
     }
 
      li {
@@ -110,4 +120,97 @@ html, body {
 
 .navigation li a:hover {
     background-color: #111;
+}
+
+.FFbutton {
+    background-color: #38003c; /* Purple */
+    border-radius: 8px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.FFbutton:hover {
+    background-color: #e90052; /* Pink */
+    color: white;
+}
+
+.FFbutton:active {
+    background-color: #BA0041; /* Dark Pink */
+    color: white;
+}
+
+.disabled {
+    opacity: 0.6;
+    background-color: #38003c; /* Purple */
+    border-radius: 8px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: not-allowed;
+}
+
+.predictionMissed {
+    width: 180px;
+    background-color: #e90052; /* Pink */
+    color: white;
+    border: 0.1em solid #ccc;
+    border-radius: 0.1em;
+    padding: 0.1em 0.5em;
+    border-radius: 4px;
+}
+
+.fixtureResults {
+    background-color: #e90052; /* Pink */
+    color: white;
+    text-align:center;
+    width: 50px;
+    border: 0.1em solid #ccc;
+    border-radius: 0.1em;
+    padding: 0.1em 0.5em;
+    border-radius: 4px;
+}
+
+.prediction {
+    text-align:center;
+    width: 50px;
+    border: 0.1em solid #ccc;
+    border-radius: 0.1em;
+    padding: 0.1em 0.5em;
+    border-radius: 4px;
+}
+
+.points{
+  color: #e90052; /* Pink */
+}
+
+/* unvisited link */
+a:link {
+    color: #e90052; /* Pink */
+}
+
+/* visited link */
+a:visited {
+    color: #e90052; /* Pink */
+}
+
+/* mouse over link */
+a:hover {
+    color: #BA0041; /* Dark Pink */
+}
+
+/* selected link */
+a:active {
+    color: #38003c; /* Purple */
 }
